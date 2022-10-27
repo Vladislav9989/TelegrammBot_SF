@@ -29,7 +29,7 @@ class Convertor:
             raise APIException(f'Не удалось обработать количество {amount}!')
 
         url = f"https://api.apilayer.com/exchangerates_data/convert?to={sym_key}&from={base_key}&amount={amount}"
-        headers = {"apikey": "DFmWZjdt0fKhXzxoHchC7Oi6Wd4f1wQ4"}
+        headers = {"apikey": "enter_apikey"}
         response = requests.get(url, headers=headers)
         result = json.loads(response.content)
         price = round(result['result'], 2)
